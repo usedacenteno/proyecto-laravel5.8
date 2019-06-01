@@ -14,12 +14,13 @@ class CrearTablaArticulo extends Migration
     public function up()
     {
         Schema::create('articulo', function (Blueprint $table) {
-            $table->bigIncrements('idarticulo');
-            $table->unsignedInteger('idcategoria');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('categoria_id');
+            $table->foreign('categoria_id','fk_articulo_categoria')->references('id')->on('categoria')->onDelete('restrict')->onUpdate('restrict');
             $table->string('codigo',50);
             $table->string('nombre',100);
-            $table->int('stock',11);
-            $table->string('descripcion',512);
+            $table->integer('stock');
+            $table->text('descripcion');
             $table->string('imagen',50);
             $table->string('estado',20);
             $table->timestamps();

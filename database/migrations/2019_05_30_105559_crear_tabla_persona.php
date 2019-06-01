@@ -14,14 +14,14 @@ class CrearTablaPersona extends Migration
     public function up()
     {
         Schema::create('persona', function (Blueprint $table) {
-            $table->bigIncrements('idpersona');
-            $table->varchar('tipo_persona',20);
-            $table->varchar('nombre', 100);
-            $table->varchar('tipo_documento',20);
-            $table->varchar('num_documento',15);
-            $table->varchar('direccion',70);
-            $table->varvhar('telefono', 15);
-            $table->varchar('email',50);
+            $table->bigIncrements('id');
+            $table->string('tipo_persona',20);
+            $table->string('nombre',50);
+            $table->string('tipo_documento',20);
+            $table->string('num_documento',15);
+            $table->string('direccion',70);
+            $table->string('telefono',20);
+            $table->string('email',50);
             $table->timestamps();
         });
     }
