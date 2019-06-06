@@ -17,6 +17,8 @@ class CrearTablaVenta extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('cliente_id');
             $table->foreign('cliente_id','fk_venta_persona')->references('id')->on('persona')->onDelete('restrict')->onUpdate('restrict');
+            $table->unsignedBigInteger('usuario_id');
+            $table->foreign('usuario_id','fk_venta_usuario')->references('id')->on('usuario')->onDelete('restrict')->onUpdate('restrict');
             $table->string('tipo_comprobante',20);
             $table->string('serie_comprobante',7);
             $table->string('num_comprobante',10);
