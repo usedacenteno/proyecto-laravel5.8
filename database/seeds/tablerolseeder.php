@@ -14,7 +14,7 @@ class tablerolseeder extends Seeder
     {
         $rols =[
             'adminstrador',
-            'encargado',
+            'supervisor de tienda',
              'vendedor'
         ];
         foreach($rols as $key=> $value){

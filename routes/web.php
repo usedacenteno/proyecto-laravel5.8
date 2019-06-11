@@ -11,8 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('frutas/agregar','Frutacontroller@create');
-Route::post('frutas/agregar','Frutacontroller@store');
+Route::get('/','InicioController@index');
+
