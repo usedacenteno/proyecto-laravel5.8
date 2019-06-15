@@ -24,6 +24,8 @@ class CrearTablaIngreso extends Migration
             $table->decimal('impuesto',4,2);
             $table->string('estado',20);
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

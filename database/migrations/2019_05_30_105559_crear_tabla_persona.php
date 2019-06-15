@@ -23,6 +23,8 @@ class CrearTablaPersona extends Migration
             $table->string('telefono',20);
             $table->string('email',50);
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

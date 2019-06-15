@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,4 +13,8 @@
 */
 
 Route::get('/','InicioController@index');
+Route::get('admin/permiso', 'Admin\PermisoController@index');
+Route::get('admin/permiso/crear', 'Admin\PermisoController@crear');
+
+
 

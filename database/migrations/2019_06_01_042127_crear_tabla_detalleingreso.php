@@ -23,6 +23,8 @@ class CrearTablaDetalleingreso extends Migration
             $table->decimal('precio_compra',11,2);
             $table->decimal('precio_venta',11,2);
             $table->timestamps();
+            $table->charset='utf8mb4';
+            $table->collation='utf8mb4_spanish_ci';
         });
     }
 

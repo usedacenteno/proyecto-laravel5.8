@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
+namespace App\Http\Controllers\Admin;
 
-class InicioController extends Controller
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class InicioController extends Controller
      */
     public function index()
     {
-       return View('');
+        //
     }
 
     /**
@@ -21,7 +22,7 @@ class InicioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function crear()
     {
         //
     }
@@ -32,7 +33,7 @@ class InicioController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function guardar(Request $request)
     {
         //
     }
@@ -43,7 +44,7 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function mostrar($id)
     {
         //
     }
@@ -54,7 +55,7 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function editar($id)
     {
         //
     }
@@ -66,7 +67,7 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function actualizar(Request $request, $id)
     {
         //
     }
@@ -77,7 +78,7 @@ class InicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function eliminar($id)
     {
         //
     }
