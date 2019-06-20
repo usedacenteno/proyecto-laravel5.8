@@ -15,6 +15,9 @@
 Route::get('/','InicioController@index');
 Route::get('admin/permiso', 'Admin\PermisoController@index');
 Route::get('admin/permiso/crear', 'Admin\PermisoController@crear');
+Route::get('admin/menu', 'Admin\MenuController@index');
+Route::get('admin/menu/crear', 'Admin\MenuController@crear');
+Route::post('admin/menu', 'Admin\MenuController@guardar')->name('guardar_menu');
 
 
 
