@@ -1,4 +1,4 @@
- <!-- Left side column. contains the sidebar -->
+{{dd($menusComposer)}}
  <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
