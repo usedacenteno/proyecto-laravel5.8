@@ -22,6 +22,7 @@ Menú
         <div class="box box-success">
             <div class="box-header with-border">
                 <h3 class="box-title">Menús</h3>
+                <a href="{{route('crear_menu')}}" class="btn btn-danger btn-sm pull-right">Crear Menú</a>
             </div>
             <div class="box-body">
                 @csrf
