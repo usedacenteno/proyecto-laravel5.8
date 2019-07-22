@@ -18,7 +18,7 @@ class UsuarioAdministradorSeeder extends Seeder
     ]);
     DB::table('usuario')->insert([
         'usuario'=> 'web',
-        'nombre' => 'desarrollador',
+        'nombre' => 'supervisor de tienda',
         'password'=> bcrypt('curso')
     ]);
     DB::table('usuario_rol')->insert([
