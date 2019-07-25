@@ -25,6 +25,7 @@ class CategoriaController extends Controller
             ->orderBy('id','desc')
             ->paginate(7);
             return view('almacen.categoria.index', compact('categorias','query'));
+           
         }
     }
 
@@ -107,12 +108,12 @@ class CategoriaController extends Controller
      */
     public function destroy($id)
     {
-        Categaria::destroy($id);
-        return redirect('admin/almacen/categoria')->with('mensaje', 'Menú eliminado con exito');
-      /*$categoria=Categaria::findOrFail($id);
-      $categoria->condicion='0';
+        //Categaria::destroy($id);
+        //return redirect('admin/almacen/categoria')->with('mensaje', 'Categoria eliminado con exito');
+      $categoria=Categaria::findOrFail($id);
+      $categoria->estado='0';
       $categoria->update();
-       return redirect('admin/almacen/categoria');*/
+       return redirect('admin/almacen/categoria')->with('mensaje', 'Categoria desabilidata con exito');
     }
     public function guardarOrden(Request $request)
     {

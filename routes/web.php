@@ -38,13 +38,20 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
     /*RUTAS MENU_ROL*/
     Route::get('menu-rol', 'MenuRolController@index')->name('menu_rol');
     Route::post('menu-rol', 'MenuRolController@guardar')->name('guardar_menu_rol');
-    //rutas del almacen
+    //rutas del almacen Categoria
     Route::get('almacen/categoria', 'CategoriaController@index')->name('vista_categoria');
     Route::get('categoria/crear', 'CategoriaController@create')->name('crear_categoria');
     Route::post('categoria', 'categoriaController@store')->name('guardar_categoria');
     Route::get('almacen/categoria/{id}/editar', 'CategoriaController@edit')->name('editar_categoria');
     Route::put('almacen/categoria/{id}','CategoriaController@update')->name('actualizar_categoria');
     Route::get('almacen/categoria/{id}/eliminar', 'CategoriaController@destroy')->name('eliminar_categoria');
+    //Rutas del almacen articulo
+    Route::get('almacen/articulo', 'ArticuloController@index')->name('vista_articulo');
+    Route::get('articulo/crear', 'ArticuloController@create')->name('crear_articulo');
+    Route::post('articulo', 'ArticuloController@store')->name('guardar_articulo');
+    Route::get('almacen/articulo/{id}/editar', 'ArticuloController@edit')->name('editar_articulo');
+    Route::put('almacen/articulo/{id}','ArticuloController@update')->name('actualizar_articulo');
+    Route::get('almacen/articulo/{id}/eliminar', 'ArticuloController@destroy')->name('eliminar_articulo');
 });
 
 
