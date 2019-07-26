@@ -54,7 +54,7 @@
                  <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
                       <div class="box-body">                        
                           <label for="descripcion">Descripción</label>
-                          <input type="text" name="descripcion" class="form-control" value="{{ $data->descripcion}}" >
+                          <input type="text" name="descripcion" class="form-control" value="{{ $data->descripcion ?? ''}}" >
                       </div>
                  </div>
                  <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">

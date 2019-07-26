@@ -52,6 +52,20 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
     Route::get('almacen/articulo/{id}/editar', 'ArticuloController@edit')->name('editar_articulo');
     Route::put('almacen/articulo/{id}','ArticuloController@update')->name('actualizar_articulo');
     Route::get('almacen/articulo/{id}/eliminar', 'ArticuloController@destroy')->name('eliminar_articulo');
+    //Rutas de Ventas Cliente
+    Route::get('ventas/cliente', 'ClienteController@index')->name('vista_cliente');
+    Route::get('cliente/crear', 'ClienteController@create')->name('crear_cliente');
+    Route::post('cliente', 'ClienteController@store')->name('guardar_cliente');
+    Route::get('ventas/cliente/{id}/editar', 'ClienteController@edit')->name('editar_cliente');
+    Route::put('ventas/cliente/{id}','ClienteController@update')->name('actualizar_cliente');
+    Route::get('ventas/cliente/{id}/eliminar', 'ClienteController@destroy')->name('eliminar_cliente');
+    //Ruta de compras proveedor
+    Route::get('compras/proveedor', 'ProveedorController@index')->name('vista_proveedor');
+    Route::get('proveedor/crear', 'ProveedorController@create')->name('crear_proveedor');
+    Route::post('proveedor', 'ProveedorController@store')->name('guardar_proveedor');
+    Route::get('compras/proveedor/{id}/editar', 'ProveedorController@edit')->name('editar_proveedor');
+    Route::put('compras/proveedor/{id}','ProveedorController@update')->name('actualizar_proveedor');
+    Route::get('compras/proveedor/{id}/eliminar', 'ProveedorController@destroy')->name('eliminar_proveedor');
 });
 
 

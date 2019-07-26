@@ -10,7 +10,7 @@
             <div class="box box-danger">
                 <div class="box-header with-border">
                     <h3 class="box-title">Crear Categorias</h3>
-                    <a href="{{route('vista_categoria')}}" class="btn btn-info btn-sm pull-right">Listado</a>
+                    <a href="{{route('vista_categoria')}}" class="btn btn-info btn-sm pull-right"><i class="text-danger glyphicon glyphicon-arrow-left"></i>Volver</a>
                 </div>
                 <form action="{{route('guardar_categoria')}}" id="form-general" class="form-horizontal" method="POST" autocomplete="off">
                     @csrf

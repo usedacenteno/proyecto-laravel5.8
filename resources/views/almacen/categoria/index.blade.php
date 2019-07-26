@@ -39,7 +39,7 @@
                    <td>{{$cat->descripcion}}</td>
                    <td>
                        <a href="{{route('editar_categoria', ['id' => $cat->id])}}"><button class="btn btn-info">Editar</button></a>
-                       <a href="{{route('eliminar_categoria', ['id' => $cat->id])}}" class="eliminar-menu tooltipsC" title="Eliminar esta categoria"><button class="btn btn-danger">Eliminar</button></a>
+                       <a href="{{route('eliminar_categoria', ['id' => $cat->id])}}" class="eliminar-menu tooltipsC" title="Eliminar esta categoria"><button class="btn btn-danger" data-toggle="modal" data-target="#modal-danger" >Eliminar</button></a>
                    </td>
                 </tr>
                 

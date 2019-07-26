@@ -20,7 +20,8 @@ class CategoriaController extends Controller
     {
         if ($request){
             $query=trim($request->get('searchText'));
-            $categorias = DB::table('categoria')->where('nombre','LIKE','%' .$query.'%')
+            $categorias = DB::table('categoria')
+            ->where('nombre','LIKE','%' .$query.'%')
             ->where('estado','=','1')
             ->orderBy('id','desc')
             ->paginate(7);

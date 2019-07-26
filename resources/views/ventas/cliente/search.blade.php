@@ -10,15 +10,14 @@
 
 
  <!-- search form -->
- <form action="{{route('vista_articulo')}}" method="get" class="sidebar-form" autocomplete='off',role= 'search' >
+ <form action="{{route('vista_cliente')}}" method="get" class="sidebar-form" autocomplete='off',role= 'search' >
      
         <div class="input-group">
           <input type="text" name="searchText" class="form-control" placeholder="Buscar..." >
               <span class="input-group-btn">
-                    <button type="submit" class="btn btn-primary">Buscar</button>
-                
+                    <button type="submit" class="btn btn-primary">Buscar</button>            
               </span>
         </div>
     
-      </form>
+</form>
       <!-- /.search form -->
