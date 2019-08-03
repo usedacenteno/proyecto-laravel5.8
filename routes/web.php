@@ -66,7 +66,15 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['aut
     Route::get('compras/proveedor/{id}/editar', 'ProveedorController@edit')->name('editar_proveedor');
     Route::put('compras/proveedor/{id}','ProveedorController@update')->name('actualizar_proveedor');
     Route::get('compras/proveedor/{id}/eliminar', 'ProveedorController@destroy')->name('eliminar_proveedor');
+    //Rutas de compras Ingresos
+    Route::get('compras/ingresos', 'IngresoController@index')->name('vista_ingreso');
+    Route::get('ingreso/crear', 'IngresoController@create')->name('crear_ingreso');
+    Route::post('ingreso', 'IngresoController@store')->name('guardar_ingreso');
+    Route::get('compras/ingreso/{id}/mostrar', 'IngresoController@show')->name('mostrar_ingreso');
+    Route::put('compras/ingreso/{id}','IngresoController@update')->name('actualizar_ingreso');
+    Route::get('compras/ingreso/{id}/eliminar', 'IngresoController@destroy')->name('eliminar_ingreso');
 });
+
 
 
 
