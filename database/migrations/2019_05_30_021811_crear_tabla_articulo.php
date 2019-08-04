@@ -20,8 +20,8 @@ class CrearTablaArticulo extends Migration
             $table->string('codigo',50);
             $table->string('nombre',100);
             $table->integer('stock');
-            $table->text('descripcion');
-            $table->string('imagen',50);
+            $table->string('descripcion',512)->nullable();
+            $table->string('imagen',50)->nullable();
             $table->string('estado',20);
             $table->timestamps();
             $table->charset='utf8mb4';

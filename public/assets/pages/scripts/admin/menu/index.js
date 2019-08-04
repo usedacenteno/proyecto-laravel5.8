@@ -13,5 +13,22 @@ $(document).ready(function () {
             }
         });
     });
+    $('.eliminar-menu').on('click', function(event){
+        event.preventDefault();
+        const url = $(this).attr('href');
+        swal({
+            title: '¿ Está seguro de eliminar ?',
+            text: "Esta acción es irreversible!",
+            icon: 'warning',
+            buttons: {
+                cancel: "Cancelar",
+                confirm: "Aceptar"
+            },
+        }).then((value) => {
+            if (value) {
+                window.location.href = url;
+            }
+        });
+   })
     $('#nestable').nestable('expandAll');
 });
