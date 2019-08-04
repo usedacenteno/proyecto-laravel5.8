@@ -165,7 +165,8 @@ class IngresoController extends Controller
         $ingreso=DB::table('ingreso as i')
         ->join('persona as p','i.proveedor_id','=','p.id')
         ->join('detalleingreso as di','i.id','=','di.ingreso_id')
-        ->select('i.id','i.fecha_hora','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado',DB::raw('sum(di.cantidad*precio_compra) as total'))
+        ->select('i.id','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado',DB::raw('sum(di.cantidad*precio_compra) as total'))
+        ->groupBy('i.id','p.nombre','i.tipo_comprobante','i.serie_comprobante','i.num_comprobante','i.impuesto','i.estado')
         ->where('i.id','=',$id)
         ->first();
 

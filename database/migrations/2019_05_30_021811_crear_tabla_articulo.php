@@ -21,7 +21,7 @@ class CrearTablaArticulo extends Migration
             $table->string('nombre',100);
             $table->integer('stock');
             $table->string('descripcion',512)->nullable();
-            $table->string('imagen',50);
+            $table->string('imagen',50)->nullable();
             $table->string('estado',20);
             $table->timestamps();
             $table->charset='utf8mb4';
